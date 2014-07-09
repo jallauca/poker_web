@@ -1,0 +1,24 @@
+GIT
+  remote: https://github.com/jallauca/poker_hands.git
+  revision: fa6b194d5aa940e0186b697746085505df08dcf0
+  specs:
+    poker (0.0.1)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    rack (1.5.2)
+    rack-protection (1.5.3)
+      rack
+    sinatra (1.4.5)
+      rack (~> 1.4)
+      rack-protection (~> 1.4)
+      tilt (~> 1.3, >= 1.3.4)
+    tilt (1.4.1)
+
+PLATFORMS
+  java
+
+DEPENDENCIES
+  poker!
+  sinatra
