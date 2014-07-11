@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/jallauca/poker_hands.git
-  revision: 8ca3c110af2930c49e4dfb912c0016fb86ecb2ec
+  revision: bc5b56254f75a71552f525b977613c9d1be06844
   specs:
-    poker (0.0.2)
+    poker (0.0.3)
 
 GEM
   remote: https://rubygems.org/
@@ -31,7 +31,7 @@ PLATFORMS
   java
 
 DEPENDENCIES
-  poker (~> 0.0.2)!
+  poker (~> 0.0.3)!
   rack-test
   rspec (~> 2.14.0)
   sinatra

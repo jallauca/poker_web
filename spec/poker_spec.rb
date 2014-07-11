@@ -14,7 +14,7 @@ describe 'Poker' do
     game = 'Black: 2H 3D 5S 9C KD White: 2C 3H 4S 8C AH'.gsub(/\s/, '%20')
     get "/winner?Game=#{game}"
     expect(last_response).to be_ok
-    expect(last_response.body).to eq('White - High Card')
+    expect(last_response.body).to include('White')
   end
 
   it "error response when params any other than Game" do
