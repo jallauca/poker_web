@@ -6,6 +6,7 @@ get '/winner' do
   game = params["Game"]
   return incorrect_params unless game
 
+  game = game.gsub(/-/, ' ')
   split_hands = game.scan(/\w+:(?:\s(?:[0-9AJKQ]|10)[HDSC])*/)
   return incorrect_params if split_hands.count != 2
 
@@ -13,6 +14,21 @@ get '/winner' do
     hand.split(":").last.strip.split(" ").count
   end
   return incorrect_params if card_counts.any?{ |c| c != 5 }
+
+  Poker.find_winner( game )
+end
+
+get '/texas_hold_em' do
+  game = params["Game"]
+  return incorrect_params unless game
+
+  game = game.gsub(/-/, ' ')
+  split_hands = game.scan(/\w+:(?:\s(?:[0-9AJKQ]|10)[HDSC])*/)
+
+  card_counts = split_hands.map do |hand|
+    hand.split(":").last.strip.split(" ").count
+  end
+  return incorrect_params if card_counts.any?{ |c| c != 7 }
 
   Poker.find_winner( game )
 end
