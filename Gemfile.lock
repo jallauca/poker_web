@@ -29,6 +29,7 @@ GEM
 
 PLATFORMS
   java
+  ruby
 
 DEPENDENCIES
   poker (~> 0.0.3)!
